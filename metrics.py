@@ -8,7 +8,7 @@ if len (sys.argv) < 2:
     print ('wrong argument, will try "metrics cpu" or "metrics mem" commands')
 # if arg = cpu, print CPU metrics:
 elif sys.argv[1] == "cpu":
-    cpu = psutil.cpu_times()
+    cpu = psutil.cpu_times_percent(interval=1)
     print("CPU LOADING INFO:")
     print('cpu.idle: ', cpu[3])
     print('cpu.user: ', cpu[0])
